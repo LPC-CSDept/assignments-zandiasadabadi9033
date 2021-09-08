@@ -5,7 +5,7 @@ using namespace std;
 
 struct Student {
   int ID;
-  string name;
+  char name[20];
   double score[2];
   double sum;
   double avg;
@@ -14,11 +14,11 @@ struct Student {
 int main()
 {
   ifstream ifs;
-	//ofstream ofs;
+	ofstream ofs;
 	
 	Student s[10];
 	ifs.open("students.txt");
-  //ofs.open("students.bin" );
+  ofs.open("students.bin" );
 
   // To read text from file "students.txt" and assign to the Student struct 
 	for (int i = 0; i < 10; i++) {
@@ -38,9 +38,10 @@ int main()
 		cout << s[i].score[0] << " " << s[i].score[1] << "\t";
 		cout << s[i].sum << " " << s[i].avg << endl;
 	}
+
+  for( int i=0;i<10; i++) {
+		ofs.write( (char *)&s, sizeof(s));
+  }
 	
   return 0;
-
-
-
 }
