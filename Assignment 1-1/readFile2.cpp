@@ -30,5 +30,6 @@ int main()
 	  cout << "Avg: " << s[i].avg << "\n";
   }
 
+  
   return 0;
 }
