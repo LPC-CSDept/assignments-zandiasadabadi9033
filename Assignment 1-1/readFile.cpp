@@ -20,7 +20,7 @@ int main()
 	ifs.open("students.txt");
   ofs.open("students.bin" );
 
-  // To read text from file "students.txt" and assign to the Student struct 
+  // To read text from file "students.txt" and assign to the Student struct 's'
 	for (int i = 0; i < 10; i++) {
 		ifs >> s[i].ID;
 		ifs >> s[i].name;
@@ -30,7 +30,7 @@ int main()
 		s[i].avg = s[i].sum / 2;
 	}
 
-  // To output the content stored in the Student struct variables
+  // To output the content stored in the Student struct 's' variables
 
 	for (int i = 0; i < 10; i++) {
 		cout << s[i].ID << "\t" ;
@@ -39,8 +39,9 @@ int main()
 		cout << s[i].sum << " " << s[i].avg << endl;
 	}
 
-  for( int i=0;i<10; i++) {
-		ofs.write( (char *)&s, sizeof(s));
+  // Writes the content stored in the Student struct 's' to the binary file "students.bin"
+  for (int i = 0; i < 10; i++) {
+		ofs.write((char *)&s, sizeof(s));
   }
 	
   return 0;
