@@ -14,15 +14,16 @@ void linearSearch(Student[], int, int);
 int SIZE = 10;
 
 int main() {
-	ifstream ifs;
+  ifstream ifs;
 	Student s[SIZE];
-    int numID;
+  int numID;
 
 	ifs.open("students.bin");
 
   // Reads the text from the binary file "students.bin"
 	ifs.read( (char *)&s, sizeof(s) );
 
+  // Shows the student ID's so that the user can pick one
   cout << "The Student ID's are:\n";
   for (int i = 0; i < SIZE; i++) {
 	  cout << s[i].ID << endl;
@@ -31,6 +32,8 @@ int main() {
   // Asks the user to pick an ID that would allow them to see the student's data
   cout << "\nEnter the ID of the student that you would like to get to know more about: ";
   cin >> numID;
+
+  // Calls the function that would check to see if the entered value matches one of the student ID's, and if so, returns the data for that particular student
   linearSearch(s, SIZE, numID);
 
   return 0;
