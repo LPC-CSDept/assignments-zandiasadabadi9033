@@ -15,7 +15,7 @@ int SIZE = 10;
 
 int main() {
   ifstream ifs;
-	Student s[SIZE];
+  Student s[SIZE];
   int numID;
 
 	ifs.open("students.bin");
