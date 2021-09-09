@@ -62,7 +62,7 @@ int main() {
         else {
           cout << "\nInvalid input... Try again...\n";
         }
-      } while(numID < 10000 && numID > 10011);
+      } while(!(numID > 10000 && numID < 10011));
 
     }
     else if (toupper(sentinel) == 'Q') {
