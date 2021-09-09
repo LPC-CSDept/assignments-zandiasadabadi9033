@@ -39,6 +39,8 @@ int main() {
 		    cout << s[i].score[0] << " " << s[i].score[1] << "\t";
 		    cout << s[i].sum << " " << s[i].avg << endl;
 	    }
+
+      cout << "\nLet's choose again :)\n";
     }
 
     else if (toupper(sentinel) == 'B') {
@@ -48,18 +50,27 @@ int main() {
       }
 
       // Asks the user to pick an ID that would allow them to see the student's data
-      cout << "\nEnter the ID of the student that you would like to get to know more about: ";
-      cin >> numID;
+      do {
+        cout << "\nEnter the ID of the student that you would like to get to know more about: ";
+        cin >> numID;
 
-      // Calls the function that would check to see if the entered value matches one of the student ID's, and if so, returns the data for that particular student
-      linearSearch(s, SIZE, numID);
+        if (numID > 10000 && numID < 10011) {
+          // Calls the function that would check to see if the entered value matches one of the student ID's, and if so, returns the data for that particular student
+          linearSearch(s, SIZE, numID);
+          cout << "\nLet's choose again :)\n";
+        }
+        else {
+          cout << "\nInvalid input... Try again...\n";
+        }
+      } while(numID < 10000 && numID > 10011);
+
     }
     else if (toupper(sentinel) == 'Q') {
       cout << "\nProgram is terminated\n";
     }
 
     else {
-      cout << "\nYour input is invalid... Try again...\n";
+      cout << "\nInvalid input... Try again...\n";
     }
   } while (toupper(sentinel) != 'Q');
 
