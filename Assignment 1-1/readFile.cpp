@@ -11,17 +11,19 @@ struct Student {
   double avg;
 };
 
+int SIZE = 10;
+
 int main()
 {
   ifstream ifs;
 	ofstream ofs;
 	
-	Student s[10];
+	Student s[SIZE];
 	ifs.open("students.txt");
   ofs.open("students.bin" );
 
   // To read text from file "students.txt" and assign to the Student struct 's'
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < SIZE; i++) {
 		ifs >> s[i].ID;
 		ifs >> s[i].name;
 		ifs >> s[i].score[0];
@@ -31,7 +33,6 @@ int main()
 	}
 
   // To output the content stored in the Student struct 's' variables
-
 	for (int i = 0; i < 10; i++) {
 		cout << s[i].ID << "\t" ;
 		cout << s[i].name << "\t";
