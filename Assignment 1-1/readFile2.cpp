@@ -17,11 +17,11 @@ int main() {
   ifstream ifs;
   Student s[SIZE];
   int numID;
-
-	ifs.open("students.bin");
+  
+  ifs.open("students.bin");
 
   // Reads the text from the binary file "students.bin"
-	ifs.read( (char *)&s, sizeof(s) );
+  ifs.read( (char *)&s, sizeof(s) );
 
   // Shows the student ID's so that the user can pick one
   char sentinel;
@@ -34,11 +34,11 @@ int main() {
 
     if (toupper(sentinel) == 'A') {
       for (int i = 0; i < 10; i++) {
-		    cout << s[i].ID << "\t" ;
-		    cout << s[i].name << "\t";
-		    cout << s[i].score[0] << " " << s[i].score[1] << "\t";
-		    cout << s[i].sum << " " << s[i].avg << endl;
-	    }
+        cout << s[i].ID << "\t" ;
+        cout << s[i].name << "\t";
+        cout << s[i].score[0] << " " << s[i].score[1] << "\t";
+        cout << s[i].sum << " " << s[i].avg << endl;
+      }
 
       cout << "\nLet's choose again :)\n";
     }
@@ -46,7 +46,7 @@ int main() {
     else if (toupper(sentinel) == 'B') {
       cout << "The Student ID's are:\n";
       for (int i = 0; i < SIZE; i++) {
-	      cout << s[i].ID << endl;
+        cout << s[i].ID << endl;
       }
 
       // Asks the user to pick an ID that would allow them to see the student's data
@@ -82,11 +82,11 @@ void linearSearch(Student s[], int n, int target) {
   for (int i = 0; i < n; i++) {
     if (s[i].ID == target) {
       cout << "\nID: " << s[i].ID << "\t";
-	    cout << "Name: " << s[i].name << "\t";
-	    cout << "Score #1: " << s[i].score[0] << "\t";
-	    cout << "Score #2: " << s[i].score[1] << "\t";
-	    cout << "Sum: " << s[i].sum << "\t";
-	    cout << "Avg: " << s[i].avg << "\n";
+      cout << "Name: " << s[i].name << "\t";
+      cout << "Score #1: " << s[i].score[0] << "\t";
+      cout << "Score #2: " << s[i].score[1] << "\t";
+      cout << "Sum: " << s[i].sum << "\t";
+      cout << "Avg: " << s[i].avg << "\n";
     }
   }
 }
