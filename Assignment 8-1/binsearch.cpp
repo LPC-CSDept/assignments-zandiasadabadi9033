@@ -15,25 +15,23 @@ int binarySearch(int [], int, int);
 
 int main()
 {
-	const int SIZE = 10;
-	int numbers[SIZE] = {10, 25, 30, 35, 40, 45, 55, 60, 65, 70 };
-	int target = 35;
-	int index;
-
-
-	index = binarySearch(numbers, SIZE, target );
-	if ( index == -1)
-		cout << "Not found\n";
-	else
-		cout << "Found at index " << index << endl;
+  const int SIZE = 10;
+  int numbers[SIZE] = {10, 25, 30, 35, 40, 45, 55, 60, 65, 70 };
+  int target = 35;
+  int index;
+  
+  index = binarySearch(numbers, SIZE, target );
+  if ( index == -1)
+    cout << "Not found\n";
+  else
+  cout << "Found at index " << index << endl;
 }
 
 int binarySearch(int number[], int N, int target)
 {
-	int first, last, mid;
-	first = 0;
+  int first, last, mid;
+  first = 0;
   last = N - 1;
-    
-
-	return -1;
+  
+  return -1;
 }
