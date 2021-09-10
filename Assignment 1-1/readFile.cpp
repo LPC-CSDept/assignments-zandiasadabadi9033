@@ -31,6 +31,7 @@ int main()
     ifs >> s[i].score[1];
     s[i].sum = s[i].score[0] + s[i].score[1];
     s[i].avg = s[i].sum / 2;
+    // Writes the content stored in the Student struct 's' to the binary file "students.bin"
     ofs.write( (char *)&s[i], sizeof(s[i]));
 
 	}
