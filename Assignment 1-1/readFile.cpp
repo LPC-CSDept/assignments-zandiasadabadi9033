@@ -44,6 +44,7 @@ int main()
   // Writes the content stored in the Student struct 's' to the binary file "students.bin"
   for (int i = 0; i < 10; i++) {
     ofs.write((char *)&s, sizeof(s));
+	// ofs.write( (char *)&s[i], sizeof(s[i]));
   }
 	
   return 0;
