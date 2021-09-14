@@ -16,7 +16,7 @@ int main()
   int arr[SIZE] = {10, 25, 30, 35, 40, 45, 55, 60, 65, 70 };
   int target = 35;
   
-  binarySearch(arr, SIZE, target );
+  binarySearch(arr, SIZE, target);
 
   return 0;
 }
