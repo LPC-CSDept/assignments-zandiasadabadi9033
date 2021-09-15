@@ -17,6 +17,12 @@ int main()
   int target = 35;
   
   binarySearch(arr, SIZE, target);
+  
+  // a little tweak.
+  // The function binarySearch returns a integer value for the index
+  // But, you do not save or use in your main function.
+  // I think the return value should be used to check whether the target value was found in the array or not.
+  
 
   return 0;
 }
