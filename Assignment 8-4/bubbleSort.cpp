@@ -16,8 +16,8 @@ int main() {
       swap(numbers[j], numbers[j + 1]);
     }
   }
-
-	printArray(numbers, SIZE);
+  
+  printArray(numbers, SIZE);
 
   return 0;
 }
