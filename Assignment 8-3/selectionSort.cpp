@@ -5,10 +5,11 @@ using namespace std;
 int findMin(int [], int, int);
 void printArray(int [], int);
 
-const int SIZE = 10;
+
 
 int main() {
   
+  const int SIZE = 10;
   int numbers[SIZE] = {25, 10, 15, 30, 35, 40, 45, 55, 20, 50};
   printArray(numbers, SIZE);
   
@@ -25,7 +26,7 @@ int findMin(int arr[], int N, int ith) {
 
   int min, minidx;
   min = arr[ith];
-  for (int j = ith; j < SIZE; j++) {
+  for (int j = ith; j < N; j++) {
     if (min > arr[j]) {
       min = arr[j];
       minidx = j;
