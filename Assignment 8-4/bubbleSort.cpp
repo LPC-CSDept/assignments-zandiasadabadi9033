@@ -8,6 +8,7 @@ int main() {
   const int SIZE = 10;
   int numbers[SIZE] = {25, 10, 15, 30, 35, 40, 45, 55, 20, 50};
   
+  cout << "The unsorted array is:" << endl;
   printArray(numbers, SIZE);
   
   for (int i = 0; i < SIZE - 1; i++){
@@ -17,6 +18,7 @@ int main() {
     }
   }
   
+  cout << "\nThe sorted array using Bubble Sort is:" << endl;
   printArray(numbers, SIZE);
 
   return 0;

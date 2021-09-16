@@ -9,8 +9,11 @@ int main() {
   
   const int SIZE = 10;
   int numbers[SIZE] = {25, 10, 15, 30, 35, 40, 45, 55, 20, 50};
+
+  cout << "The unsorted array is:" << endl;
   printArray(numbers, SIZE);
   
+  cout << "\nThe sorted array using Selection Sort is:" << endl;
   for(int i = 0; i < SIZE - 1; i++) {
     int minidx;
     minidx = findMin(numbers, SIZE, i);
