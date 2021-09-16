@@ -3,7 +3,7 @@
 using namespace std;
 
 
-int binarySearch(int [], int, int &);
+int binarySearch(int [], int, int);
 
 
 int main()
@@ -25,7 +25,7 @@ int main()
 
   return 0;
 }
-int binarySearch(int arr[], int N, int &target)
+int binarySearch(int arr[], int N, int target)
 {
   int first = 0, last = N - 1, mid;
   
