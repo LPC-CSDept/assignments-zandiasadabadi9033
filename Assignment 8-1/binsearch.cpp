@@ -1,15 +1,13 @@
 #include <iostream>
 #include <algorithm> 
-using namespace std;
 
+using namespace std;
 
 int binarySearch(int [], int, int);
 
-
-int main()
-{
+int main() {
   const int SIZE = 10;
-  int arr[SIZE] = {10, 25, 30, 35, 40, 45, 55, 60, 65, 70 };
+  int arr[SIZE] = {10, 25, 30, 35, 40, 45, 55, 60, 65, 70};
   int target = 40;
   int index = binarySearch(arr, SIZE, target);
 
@@ -25,8 +23,8 @@ int main()
 
   return 0;
 }
-int binarySearch(int arr[], int N, int target)
-{
+
+int binarySearch(int arr[], int N, int target) {
   int first = 0, last = N - 1, mid;
   
   while (first <= last) {
