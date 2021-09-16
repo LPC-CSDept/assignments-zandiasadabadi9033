@@ -22,10 +22,10 @@ int main() {
   return 0;
 }
 
-void printArray(int a[], int N) {
+void printArray(int arr[], int N) {
 
   for(int i = 0; i < N; i++) {
-    cout << a[i] << "\t";
+    cout << arr[i] << "\t";
     }
 
   cout << endl;

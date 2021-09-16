@@ -5,8 +5,6 @@ using namespace std;
 int findMin(int [], int, int);
 void printArray(int [], int);
 
-
-
 int main() {
   
   const int SIZE = 10;
@@ -15,18 +13,18 @@ int main() {
   
   for(int i = 0; i < SIZE - 1; i++) {
     int minidx;
-    minidx = findMin(numbers, SIZE, i); //Find the i_th smallest number
+    minidx = findMin(numbers, SIZE, i);
     swap(numbers[i], numbers[minidx]);
     }
     printArray(numbers, SIZE);
 
 }
 
-int findMin(int arr[], int N, int ith) {
+int findMin(int arr[], int N, int iteration) {
 
   int min, minidx;
-  min = arr[ith];
-  for (int j = ith; j < N; j++) {
+  min = arr[iteration];
+  for (int j = iteration; j < N; j++) {
     if (min > arr[j]) {
       min = arr[j];
       minidx = j;
