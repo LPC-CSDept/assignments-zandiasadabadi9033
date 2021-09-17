@@ -34,7 +34,6 @@ void makeArray(int arr[], int N) {
 }
 
 /*int findMin(int arr[], int N, int iteration) {
-
   int min, minidx;
   min = arr[iteration];
   for (int j = iteration; j < N; j++) {
