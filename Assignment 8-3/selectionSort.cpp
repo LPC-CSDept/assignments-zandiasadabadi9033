@@ -1,29 +1,39 @@
 #include <iostream>
+#include <ctime>
 
 using namespace std;
 
-int findMin(int [], int, int);
+void makeArray(int [], int);
+// int findMin(int [], int, int);
 void printArray(int [], int);
+void selectionSort(int [], int);
 
 int main() {
   
   const int SIZE = 10;
-  int numbers[SIZE] = {25, 10, 15, 30, 35, 40, 45, 55, 20, 50};
+  int randArr[SIZE];
 
-  cout << "The unsorted array is:" << endl;
-  printArray(numbers, SIZE);
+  srand(time(0));
+  makeArray(randArr, SIZE);
+  cout << "The random array is:" << endl;
+  printArray(randArr, SIZE);
   
-  cout << "\nThe sorted array using Selection Sort is:" << endl;
-  for(int i = 0; i < SIZE - 1; i++) {
-    int minidx;
-    minidx = findMin(numbers, SIZE, i);
-    swap(numbers[i], numbers[minidx]);
-    }
-    printArray(numbers, SIZE);
+  selectionSort(randArr, SIZE);
+  cout << "\nThe sorted random array using Selection Sort is:" << endl;
+  printArray(randArr, SIZE);
+
+  return 0;
+}
+
+void makeArray(int arr[], int N) {
+
+  for (int i = 0; i < N; i++) {
+    arr[i] = rand() % 55 + 1;
+  }
 
 }
 
-int findMin(int arr[], int N, int iteration) {
+/*int findMin(int arr[], int N, int iteration) {
 
   int min, minidx;
   min = arr[iteration];
@@ -34,7 +44,7 @@ int findMin(int arr[], int N, int iteration) {
     }
   }
   return minidx;
-}
+}*/
 
 void printArray(int arr[], int N) {
 
@@ -43,4 +53,17 @@ void printArray(int arr[], int N) {
     }
     cout << endl;
 
+}
+
+
+void selectionSort(int arr[], int N) {
+
+  int min, minidx;
+  for (int i = 0; i < N - 1; i++) {
+    for (int j = 0; j < N - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        swap(arr[j], arr[j + 1]);
+      }
+    }
+  }
 }
