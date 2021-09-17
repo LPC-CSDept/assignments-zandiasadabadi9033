@@ -4,7 +4,6 @@
 using namespace std;
 
 void makeArray(int [], int);
-// int findMin(int [], int, int);
 void printArray(int [], int);
 void selectionSort(int [], int);
 
@@ -32,18 +31,6 @@ void makeArray(int arr[], int N) {
   }
 
 }
-
-/*int findMin(int arr[], int N, int iteration) {
-  int min, minidx;
-  min = arr[iteration];
-  for (int j = iteration; j < N; j++) {
-    if (min > arr[j]) {
-      min = arr[j];
-      minidx = j;
-    }
-  }
-  return minidx;
-}*/
 
 void printArray(int arr[], int N) {
 
