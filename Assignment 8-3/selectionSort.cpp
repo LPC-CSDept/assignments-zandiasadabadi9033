@@ -1,5 +1,13 @@
+/*
+While coding this assignment, I realized that this code works perfectly fine without having to #include <cstdlib>. However, this library was included in the seudo-code so I did not want to mess with that.
+
+Why do we need #include <cstdlib> for this function?
+*/
+
+
 #include <iostream>
 #include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
