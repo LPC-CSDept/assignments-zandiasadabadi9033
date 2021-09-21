@@ -106,8 +106,8 @@ void bubbleSortbyScores(Students arr[], int N) {
   
   for (int i = 0; i < N - 1; i++) {
     for (int j = 0; j < N - i - 1; j++) {
-      if (arr[j].scores > arr[j + 1].scores) {
-            swap(arr[j], arr[j+1]); 
+      if (arr[i].scores[j] > arr[i + 1].scores[j]) {
+            swap(arr[i], arr[i + 1]); 
         }
     }
   }     
