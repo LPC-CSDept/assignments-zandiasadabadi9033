@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstring>
 using namespace std;
 
 const int lengthSIZE = 20;
@@ -32,13 +33,13 @@ int main() {
   bubbleSortbyID(student, SIZE);
   printArray(student, SIZE);
   
-  /*cout << "\nThe sorted Student struct array by Name is:" << endl;
+  cout << "\nThe sorted Student struct array by Name is:" << endl;
   bubbleSortbyName(student, SIZE);
   printArray(student, SIZE);
   
   cout << "\nThe sorted Student struct array by Scores are:" << endl;
   bubbleSortbyScores(student, SIZE);
-  printArray(student, SIZE);*/
+  printArray(student, SIZE);
 
   return 0;
 }
@@ -82,23 +83,34 @@ void bubbleSortbyID(Students arr[], int N) {
     }
     counter++;
   }
+
 }
-  /*for (int i = 0; i < N - 1; i++) {
-    for(int j = 0; j < N - 1; j++) {
-      if (arr[j].ID > arr[j + 1].ID) {
-        swap(arr[j].ID, arr[j + 1].ID);
-        swap(arr[j].name, arr[j + 1].name);
-        swap(arr[j].scores[i], arr[j + 1].scores[i + 1]);
-      }
-    }
-  }*/
 
 void bubbleSortbyName(Students arr[], int N) {
 
+  int outcome;
+  for (int i = 0; i < N - 1; i++) {
+    for (int j = 0; j < N - i - 1; j++) {
+      outcome = strcmp (arr[j].name, arr[j + 1].name);
+      if (outcome > 0) {
+        swap(arr[j], arr[j + 1]);
+      }
+    }
+  }
+
 }
 
 
+// NEEDS TO BE DEBUGGED
 void bubbleSortbyScores(Students arr[], int N) {
+  
+  for (int i = 0; i < N - 1; i++) {
+    for (int j = 0; j < N - i - 1; j++) {
+      if (arr[j].scores > arr[j + 1].scores) {
+            swap(arr[j], arr[j+1]); 
+        }
+    }
+  }     
 
 }
 
