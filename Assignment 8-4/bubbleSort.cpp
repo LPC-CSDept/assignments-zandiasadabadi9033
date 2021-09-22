@@ -1,3 +1,17 @@
+/*
+I had a question regarding my bubbleSortbyID() function.
+I originally planned on using my first wrtiten code (commented out part), but as I was looking
+at the bubbleSort code, I realized that it was slightly different.
+Looking at the algorithms, I believe that my code was also using the bubbleSort algorithm, but I wasn't sure.
+I didn't want to implement a searching algorithm that's not bubbleSort for this assignment,
+so I commented it out and used another set of code that does the same thing and I'm sure to be bubbleSort.
+
+Was my original function also using the bubbleSort logic? I think it did, but the coding looked different than the examples in the book, and 
+online...
+
+*/
+
+
 #include <iostream>
 #include <fstream>
 #include <cstring>
@@ -71,7 +85,9 @@ void readFile(Students arr[], int N) {
 
 void bubbleSortbyID(Students arr[], int N) {
   
-  int counter = 0;
+  // THE FUNCTION I WAS REFERRING TO ON THE TOP OF THE PAGE
+
+  /*int counter = 0;
   bool sorted = false;
   while (!sorted) {
     sorted = true;
@@ -82,6 +98,14 @@ void bubbleSortbyID(Students arr[], int N) {
       }
     }
     counter++;
+
+  }*/
+  for (int i = 0; i < N - 1; i++) {
+    for (int j = 0; j < N - i - 1; j++) {
+      if (arr[j].ID > arr[j + 1].ID) {
+        swap(arr[j], arr[j + 1]);
+      }
+    }
   }
 
 }
@@ -100,15 +124,16 @@ void bubbleSortbyName(Students arr[], int N) {
 
 }
 
-
-// NEEDS TO BE DEBUGGED
 void bubbleSortbyScores(Students arr[], int N) {
-  
+
   for (int i = 0; i < N - 1; i++) {
     for (int j = 0; j < N - i - 1; j++) {
-      if (arr[i].scores[j] > arr[i + 1].scores[j]) {
-            swap(arr[i], arr[i + 1]); 
-        }
+      int outcome1, outcome2;
+      outcome1 = arr[j].scores[0] + arr[j].scores[1] + arr[j].scores[2];
+      outcome2 = arr[j + 1].scores[0] + arr[j + 1].scores[1] + arr[j + 1].scores[2];
+      if (outcome1 < outcome2) {
+        swap(arr[j], arr[j + 1]);
+      }
     }
   }     
 
