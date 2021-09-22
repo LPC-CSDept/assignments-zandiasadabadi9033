@@ -1,13 +1,15 @@
 /*
+
 I had a question regarding my bubbleSortbyID() function.
 I originally planned on using my first wrtiten code (commented out part), but as I was looking
 at the bubbleSort code, I realized that it was slightly different.
+
 Looking at the algorithms, I believe that my code was also using the bubbleSort algorithm, but I wasn't sure.
+
 I didn't want to implement a searching algorithm that's not bubbleSort for this assignment,
 so I commented it out and used another set of code that does the same thing and I'm sure to be bubbleSort.
 
-Was my original function also using the bubbleSort logic? I think it did, but the coding looked different than the examples in the book, and 
-online...
+Was my original function also using the bubbleSort logic? I think it did, but the coding looked different than the examples in the book, and those I found online...
 
 */
 
