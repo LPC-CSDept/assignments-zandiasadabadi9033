@@ -43,10 +43,11 @@ int main() {
   else {
     cout << "The student's name is: " << students[index].name << endl << "Scores are: ";
     for (int i=0; i< scoreSIZE; i++) {
-      cout << students[index].scores[i] << "\t" ;
+      cout << students[index].scores[i] << "\t";
     }
     cout << endl;
-	}
+    
+  }
 
   return 0;
 
