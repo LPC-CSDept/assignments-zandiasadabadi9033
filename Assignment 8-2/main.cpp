@@ -1,9 +1,9 @@
 /*
 
-I could make it so that after each iteration of the Linear/Binary Search
-we would see the target and the index. 
+I could make it so that after each iteration of the Linear/Binary Search, we would see the target and the index. 
 
-However, for the sake of readability, I commented them out so that the output won't be hundreds of line long and you can easily see the average comparison numbers.
+However, for the sake of readability, I commented them out so that the output won't be hundreds of line long and you can easily...
+see the average comparison numbers.
 
 If you wanted to see each iteration, the single-commented out lines within the Linear & Binary Search would do just that.
 
