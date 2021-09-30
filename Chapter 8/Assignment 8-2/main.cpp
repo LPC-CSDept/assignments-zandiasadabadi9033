@@ -23,27 +23,27 @@ void bubbleSort(int [], int);
 int main() {
   
   const int SIZE = 64;
-  int array[SIZE];
+  int myArray[SIZE];
   int target;
   int total_linear = 0, total_binary = 0;
   
   srand(time(0));
-  makeArray(array, SIZE);
-  printArray(array, SIZE);
+  makeArray(myArray, SIZE);
+  printArray(myArray, SIZE);
   
   for(int i = 0; i < 100; i++) {
-    target = array[rand() % SIZE];
-    total_linear += linearSearch(array, SIZE, target) ;
+    target = myArray[rand() % SIZE];
+    total_linear += linearSearch(myArray, SIZE, target) ;
   }
   
   cout << "The average comparision numbers of Linear Search is " << total_linear / 100.0 << endl;
   
-  bubbleSort(array, SIZE);
-  printArray(array, SIZE);
+  bubbleSort(myArray, SIZE);
+  printArray(myArray, SIZE);
   
   for(int i = 0; i < 100; i++) {
-    target = array[rand() % SIZE];
-    total_binary += binarySearch(array, SIZE, target) ;
+    target = myArray[rand() % SIZE];
+    total_binary += binarySearch(myArray, SIZE, target) ;
   }
   
   cout << "The average comparision numbers of Binary Search is " << total_binary / 100.0 << endl;
@@ -83,39 +83,45 @@ void bubbleSort(int arr[], int N) {
 }
 
 int linearSearch(int arr[], int N, int target) {
-
-   for (int i = 0; i < N; i++) {
-     if (target == arr[i]) {
-       //cout << "Linear Search has found the value (" << target << ") at index #" << i << endl;
-       return i + 1;
-     }
-   }
-   return N;
+  
+  int counter = 0;
+  
+  for (int i = 0; i < N; i++) {
+    counter++;
+    if (target == arr[i]) {
+      //cout << "Linear Search has found the value (" << target << ") at index #" << i << endl;
+      return counter;
+    }
+  }
+  
+  return counter;
    
 }
 
 int binarySearch(int arr[], int N, int target) {
- 
- int first = 0, last = N - 1, mid;
- 
- while (first <= last) {
-   mid = (first + last) / 2;
+  
+  int first = 0, last = N - 1, mid, counter = 0;
 
-   if (arr[mid] == target) {
-     //cout << "Binary Search has found the value (" << target << ") at index #" << mid << endl;
-     return mid;
-   }
+  while (first <= last) {
+    counter++;
+    mid = (first + last) / 2;
 
-   else if (arr[mid] < target) {
-     first = mid + 1;
-   }
+    if (arr[mid] == target) {
+      //cout << "Binary Search has found the value (" << target << ") at index #" << mid << endl;
+      return counter;
+    }
 
-   else if (arr[mid] > target) {
-     last = mid - 1;
-   }
+    else if (arr[mid] < target) {
+      first = mid + 1;
+    }
+
+    else if (arr[mid] > target) {
+      last = mid - 1;
+    }
    
-  }
-
- return -1;
+   }
+   //cout << "\nThe counter is " << counter << endl
+   
+   return counter;
 
 }
