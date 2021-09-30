@@ -120,7 +120,6 @@ int binarySearch(int arr[], int N, int target) {
     }
    
    }
-   //cout << "\nThe counter is " << counter << endl
    
    return counter;
 
