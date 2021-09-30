@@ -8,6 +8,7 @@ see the average comparison numbers.
 If you wanted to see each iteration, the single-commented out lines within the Linear & Binary Search would do just that.
 
 */
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -36,7 +37,7 @@ int main() {
     total_linear += linearSearch(myArray, SIZE, target) ;
   }
   
-  cout << "The average comparision numbers of Linear Search is " << total_linear / 100.0 << endl;
+  cout << "The average comparision numbers of Linear Search is: " << total_linear / 100.0 << endl;
   
   bubbleSort(myArray, SIZE);
   printArray(myArray, SIZE);
@@ -46,7 +47,7 @@ int main() {
     total_binary += binarySearch(myArray, SIZE, target) ;
   }
   
-  cout << "The average comparision numbers of Binary Search is " << total_binary / 100.0 << endl;
+  cout << "The average comparision numbers of Binary Search is: " << total_binary / 100.0 << endl;
   
   return 0;
 
