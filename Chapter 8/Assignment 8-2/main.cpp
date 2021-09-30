@@ -1,14 +1,3 @@
-/*
-
-I could make it so that after each iteration of the Linear/Binary Search, we would see the target and the index. 
-
-However, for the sake of readability, I commented them out so that the output won't be hundreds of line long and you can easily...
-see the average comparison numbers.
-
-If you wanted to see each iteration, the single-commented out lines within the Linear & Binary Search would do just that.
-
-*/
-
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -86,7 +75,6 @@ void bubbleSort(int arr[], int N) {
 int linearSearch(int arr[], int N, int target) {
   
   int counter = 0;
-  
   for (int i = 0; i < N; i++) {
     counter++;
     if (target == arr[i]) {
@@ -102,7 +90,6 @@ int linearSearch(int arr[], int N, int target) {
 int binarySearch(int arr[], int N, int target) {
   
   int first = 0, last = N - 1, mid, counter = 0;
-
   while (first <= last) {
     counter++;
     mid = (first + last) / 2;
