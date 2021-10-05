@@ -17,7 +17,7 @@ int main() {
   
   cout << "The initial Double Values are:\n";
   ptr = makeNumbers(SIZE);
-	printNumbers(ptr, SIZE);
+  printNumbers(ptr, SIZE);
 
   cout << "The sorted Double Values are:\n";
   sortNumbers(ptr, SIZE);
