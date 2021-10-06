@@ -24,6 +24,7 @@ int main() {
   printNumbers(ptr, SIZE);
 
   deleteNumbers(ptr);
+  // printNumbers(ptr, SIZE);
 
   return 0;
 
