@@ -24,6 +24,8 @@ int main() {
   printNumbers(ptr, SIZE);
 
   deleteNumbers(ptr);
+
+  // ONCE I CALL THIS FUCNTION, I SEE THAT THE VALUES ARE STILL THERE
   // printNumbers(ptr, SIZE);
 
   return 0;
