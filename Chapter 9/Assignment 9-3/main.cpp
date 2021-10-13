@@ -15,18 +15,15 @@ int main() {
   const int SIZE = 10;
   double *ptr = nullptr;
   
-  cout << "The initial Double Values are:\n";
+  cout << "The initial double values are:\n";
   ptr = makeNumbers(SIZE);
   printNumbers(ptr, SIZE);
 
-  cout << "The sorted Double Values are:\n";
+  cout << "The sorted double values are:\n";
   sortNumbers(ptr, SIZE);
   printNumbers(ptr, SIZE);
 
   deleteNumbers(ptr);
-
-  // ONCE I CALL THIS FUCNTION, I SEE THAT THE VALUES ARE STILL THERE
-  // printNumbers(ptr, SIZE);
 
   return 0;
 
@@ -67,6 +64,6 @@ void sortNumbers(double * const ptr, int N) {
 
 void deleteNumbers(double * ptr) {
   
-  delete [] ptr;
+  delete ptr;
 
 }
