@@ -65,5 +65,5 @@ void sortNumbers(double * const ptr, int N) {
 void deleteNumbers(double * ptr) {
   
   delete ptr;
-
+  
 }
