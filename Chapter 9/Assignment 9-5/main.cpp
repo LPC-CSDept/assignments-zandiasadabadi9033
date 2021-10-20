@@ -44,8 +44,8 @@ int main() {
   }
   
   ptr = head;
-  int position = 1;
   
+  int position = 1;
   while(ptr != nullptr) {
     std::cout << "Node " << position++ << "'s value is " << ptr->num << std::endl;
     ptr = ptr->next;
