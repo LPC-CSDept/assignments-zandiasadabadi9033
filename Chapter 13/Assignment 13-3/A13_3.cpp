@@ -2,7 +2,6 @@
 #include <iostream>
 #include <fstream>
 
-using namespace std;
 
 void sortStudent(Student *s);
 void printStudent(Student &s);
@@ -20,22 +19,22 @@ int main() {
   if (ifs.fail()) {
     cerr << "File could not be opened\n";
     exit(0);
-	}
-
-	int i = 0;
-	while (ifs >> sname >> ID >> month >> day) {
+  }
+  
+  int i = 0;
+  while (ifs >> sname >> ID >> month >> day) {
     date.setDOB(month, day);
     arr[i].setSname(sname);
     arr[i].setID(ID);
     arr[i].setDOB(date);
     i++;
-	}
+  }
   
   sortStudent(arr);
   
   for (int i = 0; i < SIZE; i++) {
     printStudent(arr[i]);
-	}
+  }
 
   return 0;
 
