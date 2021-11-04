@@ -35,10 +35,10 @@ void DOB::printDate() const {
 
 }
 
-void DOB::setDOB(int m, int d) {
+void DOB::setDOB(DOB dob) {
 
-  month = m;
-  day = d;
+  dob.getMonth();
+  dob.getDay();
 
 } 
 

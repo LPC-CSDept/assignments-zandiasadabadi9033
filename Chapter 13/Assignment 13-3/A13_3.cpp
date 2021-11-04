@@ -23,7 +23,9 @@ int main() {
   
   int i = 0;
   while (ifs >> sname >> ID >> month >> day) {
-    date.setDOB(month, day);
+    date.setMonth(month);
+    date.setDay(day);
+    date.setDOB(date);
     arr[i].setSname(sname);
     arr[i].setID(ID);
     arr[i].setDOB(date);

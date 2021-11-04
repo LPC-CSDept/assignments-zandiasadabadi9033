@@ -15,7 +15,7 @@ public:
   int getMonth() const;
   int getDay() const;
   void printDate() const;
-  void setDOB(int m, int d);
+  void setDOB(DOB dob);
   void setMonth(int m);
   void setDay(int d);
   
