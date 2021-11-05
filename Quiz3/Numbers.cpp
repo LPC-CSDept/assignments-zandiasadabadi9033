@@ -7,7 +7,6 @@ using namespace std;
 Numbers::Numbers() {
 
   ID = -1;
-  numbers = 0;
 
 }
 

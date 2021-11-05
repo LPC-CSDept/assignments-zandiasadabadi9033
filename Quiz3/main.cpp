@@ -41,11 +41,10 @@ int findMax(Numbers arr[], int N) {
   int MAX = 0;
   for (int i = 0; i < N; i++) {
     int temp = arr[i].getMax() - arr[i].getMin();
-  }
-
-  if (temp > MAX) {
-    MAX = temp;
-    id = i;   
+    if (temp > MAX) {
+      MAX = temp;
+      id = i;
+    }
   }
 
   return id;
@@ -57,5 +56,5 @@ void deDup(Numbers &num1, Numbers &num2) {
   for (int i = 0; i < num2.getSize(); i++) {
     num1.deleteElm(num2.getElm(i));
   }
-  
+
 }
