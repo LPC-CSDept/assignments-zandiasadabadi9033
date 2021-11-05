@@ -10,7 +10,7 @@ class Numbers {
   vector<int> numbers;
   public:
   Numbers();
-  Numbers(int ID, int num);
+  Numbers(int ID, int N);
   int getID() const;
   int getSize() const;
   int getElm(int num) const;
@@ -18,7 +18,7 @@ class Numbers {
   int getMin() const;
   int getSum() const;
   void deleteElm(int num);
-  void addElm(int a);
+  void addElm(int num);
   void printAll() const;
 
 };
