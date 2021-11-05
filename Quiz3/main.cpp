@@ -52,4 +52,10 @@ int findMax(Numbers arr[], int N) {
 
 }
 
-void deDup(Numbers &, Numbers &);
+void deDup(Numbers &num1, Numbers &num2) {
+
+  for (int i = 0; i < num2.getSize(); i++) {
+    num1.deleteElm(num2.getElm(i));
+  }
+  
+}
