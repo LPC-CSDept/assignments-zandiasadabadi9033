@@ -94,9 +94,11 @@ void Numbers::addElm(int num) {
 
 void Numbers::printAll() const {
 
-  cout << ID << " ";
+  cout << ID << "\t";
   for (int i = 0; i < numbers.size(); i++) {
     cout << numbers[i] << " ";
   }
+
+  cout << endl;
 
 }
