@@ -34,3 +34,22 @@ int main() {
   return 0;
 
 }
+
+int findMax(Numbers arr[], int N) {
+
+  int id = -1;
+  int MAX = 0;
+  for (int i = 0; i < N; i++) {
+    int temp = arr[i].getMax() - arr[i].getMin();
+  }
+
+  if (temp > MAX) {
+    MAX = temp;
+    id = i;   
+  }
+
+  return id;
+
+}
+
+void deDup(Numbers &, Numbers &);
