@@ -1,11 +1,13 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include "Numbers.hpp"
  
 using namespace std;
  
 int findMax(Numbers[], int);
 void deDup(Numbers &, Numbers &);
+
 int main() {
   
   const int N = 5;

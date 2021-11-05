@@ -1,5 +1,6 @@
 #ifndef NUMBERS_HPP
 #define NUMBERS_HPP
+#include <vector>
 
 using namespace std;
 
