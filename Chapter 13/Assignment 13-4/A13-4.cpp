@@ -19,19 +19,24 @@ int main() {
   for (int i = 0; i < SIZE; i++) {
     stackArr.push(arr[i]);
   }
-  cout << "The array is: \n";
+
+  stackArr.isEmpty();
+
+  cout << "The stack array is:\n";
   stackArr.printAll();
   cout << endl;
   
+  cout << "The reversed values are:\n";
   for (int i = 0; i < SIZE; i++) {
     arr[i] = stackArr.pop();
   }
-  
   for (int i = 0; i < SIZE; i++) {
     cout << arr[i] << " ";
   }
 
-
+  cout << "\n\nNow... clearing the stack!\n";
+  stackArr.clear();
+  stackArr.isEmpty();
 
   return 0;
   

@@ -12,7 +12,7 @@ private:
 public:
   Stack();
   Stack(int s);
-  int isEmpty();
+  void isEmpty();
   void clear();
   void push(int el);
   int pop();

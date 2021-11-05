@@ -15,9 +15,14 @@ Stack::Stack(int s) {
   
 }
 
-int Stack::isEmpty() {
+void Stack::isEmpty() {
   
-  return pool.empty();
+  if (pool.empty() == true) {
+    cout << "The stack is empty\n";
+  }
+  else {
+    cout << "The stack is not empty\n";
+  }
   
 }
 
