@@ -40,7 +40,6 @@ Numbers::~Numbers() {
 int Numbers::getMax() const {
   
   int MAX = numbers[0];
-  
   for (int i = 0; i < size; i++) {
     if (numbers[i] > MAX) {
       MAX = numbers[i];
