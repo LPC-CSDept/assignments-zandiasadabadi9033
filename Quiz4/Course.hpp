@@ -12,21 +12,127 @@ private:
   int credits;
   string semester;
   vector<Student> student;
-  static int NUM_COURSES;
+  static int NUM_COURSES = 0;
 public:
-  Course();
-  Course(string, int, string, vector<Student>);
-  string getCName() const;
-  int getCredits() const;
-  string getSemester() const;
-  vector<Student> getStudent() const;
-  static int getNumCourses();
-  void setCName(string);
-  void setCredits(int);
-  void setSemester(string);
-  void setStudent(vector<Student>);
-  void addStudent(Student&);
-  void setCourse(string, int, string, vector<Student>);
-  friend ostream &operator << (ostream &, const Numbers &);
-  friend istream &operator >> (istream &, const Numbers &);
+  Course() {
+
+    cname = "";
+    credits = 0;
+    semester = "";
+    NUM_COURSES++;
+
+  }
+
+  Course(string name, int credit, string sem, vector<Student> stu) {
+
+    cname = name;
+    credits = credit;
+    semester = sem;
+    student = stu;
+    NUM_COURSES++;
+
+  }
+
+  string getCName() const {
+
+    return cname;
+
+  }
+
+  int getCredits() const {
+
+    return credits;
+
+  }
+
+  string getSemester() const {
+
+    return semester;
+
+  }
+
+  vector<Student> getStudent() const {
+
+    return student;
+
+  }
+  static int getNumCourses() {
+
+    return NUM_COURSES;
+
+  }
+
+  void setCName(string name) {
+
+    cname = name;
+
+  }
+
+  void setCredits(int credit) {
+
+    credits = credit;
+
+  }
+
+  void setSemester(string sem) {
+
+    semester = sem;
+
+  }
+
+  void setStudent(vector<Student> stu) {
+
+    student = stu;
+
+  }
+
+  void addStudent(Student& stu) {
+
+    student.push_back(stu);
+
+  }
+
+  // void setCourse(string name, int credit, string sem, vector<Student> stu);
+  
+  friend ostream &operator << (ostream& os, const Course &course) {
+    
+    os << "Name: " << course.cname << endl << "Credits: " << course.credits << endl  << "Semester: " <<  course.semester << "\n";
+    os << course.student.size() << endl;
+    
+    for (int i = 0; i < course.student.size(); i++) {
+      os << course.student[i].getID() << " " << course.student[i].getName() 
+      << " " << course.student[i].getGrade() << " " << course.student[i].getScores() << endl;
+    }
+    
+    os << endl;
+    
+    return os;
+    
+  }
+
+  friend istream &operator >> (istream& is, const Course & course) {
+    
+    is >> course.cname >> course.credits >> course.semester;
+    int num;
+    is >> num;
+
+    for (int i = 0; i < num; i++) {
+      int id;
+      string name;
+      char graded;
+      doubled scored;
+      is >> id >> name >> graded >> scored;
+
+      Student stu(id, name, grade, scores);
+      course.student.push_back(stu);
+    }
+
+    return is;
+        
+    /*for (int i = 0; i < course.size; i++) {
+      is >> 
+    }*/
+  
+  }
+
 };
