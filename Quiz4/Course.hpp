@@ -12,6 +12,7 @@ private:
   int credits;
   string semester;
   vector<Student> student;
+  static int NUM_COURSES;
 public:
   Course();
   Course(string, int, string, vector<Student>);
