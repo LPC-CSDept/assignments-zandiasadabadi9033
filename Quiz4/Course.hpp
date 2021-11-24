@@ -27,5 +27,5 @@ public:
   void setStudent(vector<Student>);
   void addStudent(Student&);
   void setCourse(string, int, string, vector<Student>);
-  
+  friend istream &operator >> (istream &, const Numbers &);
 };
