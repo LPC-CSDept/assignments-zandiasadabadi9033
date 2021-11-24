@@ -78,6 +78,13 @@ public:
 
   }
 
-  // void setStudent(int id, string, char, double);
+  void setStudent(int id, string, char, double) {
+
+    ID = id;
+    sname = name;
+    grade = graded;
+    scores = scored;
+    
+  }
   
 };

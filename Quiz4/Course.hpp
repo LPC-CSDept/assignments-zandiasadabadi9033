@@ -92,7 +92,15 @@ public:
 
   }
 
-  // void setCourse(string name, int credit, string sem, vector<Student> stu);
+  void setCourse(string name, int credit, string sem, vector<Student> stu) {
+
+    cname = name;
+    credits = credit;
+    semester = sem;
+    student = stu;
+    NUM_COURSES++;
+    
+  }
   
   friend ostream &operator << (ostream& os, const Course &course) {
     
@@ -123,7 +131,7 @@ public:
       doubled scored;
       is >> id >> name >> graded >> scored;
 
-      Student stu(id, name, grade, scores);
+      Student stu(id, name, graded, scored);
       course.student.push_back(stu);
     }
 
