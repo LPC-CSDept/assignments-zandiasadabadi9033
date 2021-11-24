@@ -12,16 +12,72 @@ private:
   char grade;
   double scores;
 public:
-  Student();
-  Student(int, string, char, double);
-  int getID() const;
-  string getName() const;
-  char getGrade() const;
-  double getScores() const;
-  void setID(int);
-  void setName(string);
-  void setGrade(char);
-  void setScores(double);
-  void setStudent(int, string, char, double);
+  Student() {
+
+    ID = 0;
+    sname = "";
+    grade = "";
+    scores = 0;
+
+  }
+
+  Student(int id, string name, char graded, double scored) {
+
+    ID = id;
+    sname = name;
+    grade = graded;
+    scores = scored;
+
+  }
+
+  int getID() const {
+
+    return ID;
+
+  }
+
+  string getName() const {
+
+    return sname;
+
+  }
+
+  char getGrade() const {
+
+    return grade;
+
+  }
+
+  double getScores() const {
+
+    return scores;
+
+  }
+
+  void setID(int id) {
+
+    ID = id;
+
+  }
+
+  void setName(string name) {
+
+    sname = name;
+
+  }
+
+  void setGrade(char graded) {
+
+    grade = graded;
+
+  }
+
+  void setScores(double scored) {
+
+    scores = scored;
+
+  }
+
+  // void setStudent(int id, string, char, double);
   
 };
