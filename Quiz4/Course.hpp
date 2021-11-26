@@ -99,19 +99,9 @@ public:
     
   }
   
-  friend ostream &operator<< (ostream& os, const Course &course) {
-    
-    os << "Name: " << course.cname << endl << "Credits: " << course.credits << endl  << "Semester: " <<  course.semester << "\n";
-    os << course.student.size() << endl;
-    
-    for (int i = 0; i < course.student.size(); i++) {
-      os << course.student[i].getID() << " " << course.student[i].getName() 
-      << " " << course.student[i].getGrade() << " " << course.student[i].getScores() << endl;
-    }
-    
-    os << endl;
-    
-    return os;
+  ofstream &operator<< (ofstream& os, const Course &course) {
+
+    os << 
     
   }
 
@@ -138,6 +128,8 @@ public:
       student stu = Student(id, name2, graded, scored);
       studentsVect.push_back(stu);
     }
+
+    course.setCourse(name, credit, studentsVect);
     
   }
 
