@@ -14,19 +14,14 @@ private:
 public:
   Student() {
 
-    ID = 0;
-    sname = "";
-    grade = "";
-    scores = 0;
-
   }
 
   Student(int id, string name, char graded, double scored) {
 
-    ID = id;
-    sname = name;
-    grade = graded;
-    scores = scored;
+    this->ID = id;
+    this->sname = name;
+    this->grade = graded;
+    this->scores = scored;
 
   }
 
@@ -36,7 +31,7 @@ public:
 
   }
 
-  string getName() const {
+  string getSname() const {
 
     return sname;
 
@@ -56,34 +51,34 @@ public:
 
   void setID(int id) {
 
-    ID = id;
+    this->ID = id;
 
   }
 
   void setName(string name) {
 
-    sname = name;
+    this->sname = name;
 
   }
 
   void setGrade(char graded) {
 
-    grade = graded;
+    this->grade = graded;
 
   }
 
   void setScores(double scored) {
 
-    scores = scored;
+    this->scores = scored;
 
   }
 
   void setStudent(int id, string, char, double) {
 
-    ID = id;
-    sname = name;
-    grade = graded;
-    scores = scored;
+    this->ID = id;
+    this->sname = name;
+    this->grade = graded;
+    this->scores = scored;
     
   }
   
