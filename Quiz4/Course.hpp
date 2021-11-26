@@ -101,7 +101,17 @@ public:
   
   ofstream &operator<< (ofstream& os, const Course &course) {
 
-    os << 
+    os << course.getCName() << " " << course.getCredits() << " ";
+
+    for (int i = 0; i < course.getStudent().size(); i++) {
+      os << course.getStudent()[i].getID() << " ";
+      os << course.getStudent()[i].getSname() << " ";
+      os << course.getStudent()[i].getGrade() << " ";
+      os << course.getStudent()[i].getScores() << " ";
+    }
+
+    os << endl;
+
     
   }
 
