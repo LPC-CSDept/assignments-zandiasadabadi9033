@@ -16,19 +16,16 @@ private:
 public:
   Course() {
 
-    cname = "";
-    credits = 0;
-    semester = "";
-    NUM_COURSES++;
+    NUM_COURSES += 1;
 
   }
 
   Course(string name, int credit, string sem, vector<Student> stu) {
 
-    cname = name;
-    credits = credit;
-    semester = sem;
-    student = stu;
+    this->cname = name;
+    this->credits = credit;
+    this->semester = sem;
+    this->student = stu;
     NUM_COURSES++;
 
   }
@@ -64,45 +61,44 @@ public:
 
   void setCName(string name) {
 
-    cname = name;
+    this->cname = name;
 
   }
 
   void setCredits(int credit) {
 
-    credits = credit;
+    this->credits = credit;
 
   }
 
   void setSemester(string sem) {
 
-    semester = sem;
+    this->semester = sem;
 
   }
 
   void setStudent(vector<Student> stu) {
 
-    student = stu;
+    this->student = stu;
 
   }
 
   void addStudent(Student& stu) {
 
-    student.push_back(stu);
+    this->student.push_back(stu);
 
   }
 
   void setCourse(string name, int credit, string sem, vector<Student> stu) {
 
-    cname = name;
-    credits = credit;
-    semester = sem;
-    student = stu;
-    NUM_COURSES++;
+    this->cname = name;
+    this->credits = credit;
+    this->semester = sem;
+    this->student = stu;
     
   }
   
-  friend ostream &operator << (ostream& os, const Course &course) {
+  /*friend ostream &operator << (ostream& os, const Course &course) {
     
     os << "Name: " << course.cname << endl << "Credits: " << course.credits << endl  << "Semester: " <<  course.semester << "\n";
     os << course.student.size() << endl;
@@ -141,6 +137,6 @@ public:
       is >> 
     }*/
   
-  }
+  }*/
 
 };
