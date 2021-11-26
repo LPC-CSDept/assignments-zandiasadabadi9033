@@ -13,7 +13,7 @@ private:
   int credits;
   string semester;
   vector<Student> student;
-  static int NUM_COURSES = 0;
+  int NUM_COURSES = 0;
 public:
   Course() {
 
@@ -99,48 +99,10 @@ public:
     
   }
   
-  ofstream &operator<< (ofstream& os, const Course &course) {
+  friend ofstream &operator<< (ofstream& os, const Course &course);
 
-    os << course.getCName() << " " << course.getCredits() << " ";
-
-    for (int i = 0; i < course.getStudent().size(); i++) {
-      os << course.getStudent()[i].getID() << " ";
-      os << course.getStudent()[i].getSname() << " ";
-      os << course.getStudent()[i].getGrade() << " ";
-      os << course.getStudent()[i].getScores() << " ";
-    }
-
-    os << endl;
-
-    
-  }
-
-  ifstream &operator>> (ifstream& is, const Course &course) {
-
-    string name;
-    int credit;
-    string sem;
-    ifs >> name >> credits >> sem;
-
-    int num;
-    ifs >> num;
-
-    vector<Student> studentsVect;
-
-    for (int i = 0; i < num; i++) {
-      int id;
-      string name2;
-      char graded;
-      double scored;
-      
-      ifs >> id >> name2 >> graded >> scored;
-
-      student stu = Student(id, name2, graded, scored);
-      studentsVect.push_back(stu);
-    }
-
-    course.setCourse(name, credit, studentsVect);
-    
-  }
+  friend ifstream &operator>> (ifstream &is, const Course &course);
 
 };
+
+#endif
