@@ -1,6 +1,7 @@
 #ifndef STUDENT_HPP
 #define STUDENT_HPP
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
