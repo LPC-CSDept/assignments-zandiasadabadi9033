@@ -54,7 +54,7 @@ public:
     return student;
 
   }
-  static int getNumCourses() {
+  int getNumCourses() {
 
     return NUM_COURSES;
 
@@ -99,9 +99,9 @@ public:
     
   }
   
-  friend ofstream &operator<< (ofstream& os, const Course &course);
+  friend ostream &operator<< (ostream& os, Course &course);
 
-  friend ifstream &operator>> (ifstream &is, const Course &course);
+  friend ifstream &operator>> (ifstream &is, Course &course);
 
 };
 

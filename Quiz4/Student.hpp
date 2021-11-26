@@ -73,15 +73,6 @@ public:
     this->scores = scored;
 
   }
-
-  void setStudent(int id, string, char, double) {
-
-    this->ID = id;
-    this->sname = name;
-    this->grade = graded;
-    this->scores = scored;
-    
-  }
   
 };
 

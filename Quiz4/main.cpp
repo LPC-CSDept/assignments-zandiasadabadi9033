@@ -37,7 +37,7 @@ int main() {
   while (ifs >> courseID) {
     cout << "Course ID: " << courseID << endl;
     int index;
-    for (int i = 0; Course::getNumCourses(); i++) {
+    for (int i = 0; courses[i].getNumCourses(); i++) {
       if (courses[i].getCName() == courseID) {
         index = i;
       }
@@ -63,7 +63,7 @@ int main() {
 
   ifs.close();
 
-  for (int i = 0; i < Course::getNumCourses(); i++) {
+  for (int i = 0; i < courses[i].getNumCourses(); i++) {
     cout << courses[i] << endl;
   }
   
@@ -98,7 +98,7 @@ ifstream &operator>> (ifstream &ifs, Course &course) {
   
 }
 
-ofstream &operator<< (ofstream &os, const Course &course) {
+ostream &operator<< (ostream &os, Course &course) {
   
   os << course.getCName() << " " << course.getCredits() << " ";
   
