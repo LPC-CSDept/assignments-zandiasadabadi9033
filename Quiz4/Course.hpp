@@ -2,6 +2,7 @@
 #define COURSE_HPP
 #include <iostream>
 #include "Student.hpp"
+#include <vector>
 
 using namespace std;
 
@@ -98,7 +99,7 @@ public:
     
   }
   
-  /*friend ostream &operator << (ostream& os, const Course &course) {
+  friend ostream &operator<< (ostream& os, const Course &course) {
     
     os << "Name: " << course.cname << endl << "Credits: " << course.credits << endl  << "Semester: " <<  course.semester << "\n";
     os << course.student.size() << endl;
@@ -114,29 +115,30 @@ public:
     
   }
 
-  friend istream &operator >> (istream& is, const Course & course) {
-    
-    is >> course.cname >> course.credits >> course.semester;
+  ifstream &operator>> (ifstream& is, const Course &course) {
+
+    string name;
+    int credit;
+    string sem;
+    ifs >> name >> credits >> sem;
+
     int num;
-    is >> num;
+    ifs >> num;
+
+    vector<Student> studentsVect;
 
     for (int i = 0; i < num; i++) {
       int id;
-      string name;
+      string name2;
       char graded;
-      doubled scored;
-      is >> id >> name >> graded >> scored;
+      double scored;
+      
+      ifs >> id >> name2 >> graded >> scored;
 
-      Student stu(id, name, graded, scored);
-      course.student.push_back(stu);
+      student stu = Student(id, name2, graded, scored);
+      studentsVect.push_back(stu);
     }
-
-    return is;
-        
-    /*for (int i = 0; i < course.size; i++) {
-      is >> 
-    }*/
-  
-  }*/
+    
+  }
 
 };
