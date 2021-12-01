@@ -54,15 +54,11 @@ public:
       n2 += n.nums[j];
     }
 
-    if (n1 > n2) {
-      cout << "True...";
-      return 1;
-    }
-    else {
-      cout << "False...";
-      return 0;
-    }
+    return n1 > n2;
+
   }
+
+};
 
   void printNumbers(Numbers n) {
 
@@ -74,7 +70,5 @@ public:
     cout << endl;
     
   }
-
-};
 
 #endif
