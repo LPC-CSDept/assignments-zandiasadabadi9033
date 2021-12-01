@@ -16,19 +16,26 @@ int main() {
   Student students[SIZE];
   int value;
 
-  // makeStudents(students, SIZE);
+  makeStudents(students, SIZE);
   // sort by descending scores
-  // printStudents(students, SIZE);
+  descSort(students, SIZE);
+  printStudents(students, SIZE);
 
   cout << "Please enter the ID of the student that you are looking for: ";
   cin >> value;
 
   // binarySearch to find the value
-  // print out
+  Student *result = binarySearch(students, SIZE, value);
 
+  if (result != 0) {
+    cout << "The student's information is: " << endl;
+    result->printStudent();
+  }
 
-
-
+  else {
+    cout << "Invalid ID number...";
+  }
+  
   return 0;
 
 }
@@ -111,5 +118,5 @@ Student *binarySearch(Student arr[], int N, int val) {
   }
 
   return 0;
-  
+
 }
