@@ -65,12 +65,28 @@ void makeStudents(Student arr[], int N) {
 
 void printStudents(Student arr[], int N) {
 
+  for (int i = 0; i < N; i++) {
+    arr[i].printStudent();
+  }
+
+  cout << endl;
 
 }
 
 void descSort(Student arr[], int N) {
 
+  int sum1 = 0, sum2 = 0;
 
+  for (int i = 0; i < N; i++) {
+    for (int j = 0; j < N - 1; j++) {
+      // sum1 = arr[j].
+      // sum2 = arr[j + 1].
+      if (sum1 < sum2) {
+        swap(arr[j], arr[j + 1]);
+      }
+    }
+  }
+  
 }
 
 Student *binarySearch(Student arr[], int N, int val) {
