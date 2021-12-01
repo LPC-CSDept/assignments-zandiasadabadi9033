@@ -37,8 +37,31 @@ public:
 
   }
 
-  static int getNumObjects();
+  static int getNumObjects() {
+
+    return NumofObjects;
+
+  }
   friend void printNumbers(Numbers n);
-  int operator>(Numbers);
+  int operator>(Numbers &n) {
+
+    int n1, n2;
+
+    for (int i = 0; i < nums.size(); i++) {
+      n1 += nums[i];
+    }
+    for (int j = 0; j < n.nums.size(); j++) {
+      n2 += n.nums[i];
+    }
+
+    if (n1 > n2) {
+      cout << "True...";
+      return 1;
+    }
+    else {
+      cout << "False...";
+      return 0;
+    }
+  }
 
 };
