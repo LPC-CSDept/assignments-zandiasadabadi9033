@@ -5,6 +5,11 @@
 
 using namespace std;
 
+void makeStudents(Student[], int);
+void printStudents(Student[], int);
+void descSort(Student[], int);
+Student *binarySearch(Student[], int, int);
+
 int main() {
 
   const int SIZE = 10;
@@ -26,4 +31,24 @@ int main() {
 
   return 0;
 
+}
+
+void makeStudents(Student[], int) {
+
+
+}
+
+void printStudents(Student[], int) {
+
+
+}
+
+void descSort(Student[], int) {
+
+
+}
+
+Student *binarySearch(Student[], int, int) {
+
+  
 }
