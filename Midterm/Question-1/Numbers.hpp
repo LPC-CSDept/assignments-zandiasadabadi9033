@@ -51,7 +51,7 @@ public:
       n1 += nums[i];
     }
     for (int j = 0; j < n.nums.size(); j++) {
-      n2 += n.nums[i];
+      n2 += n.nums[j];
     }
 
     if (n1 > n2) {
@@ -76,3 +76,5 @@ public:
   }
 
 };
+
+#endif
