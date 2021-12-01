@@ -79,8 +79,8 @@ void descSort(Student arr[], int N) {
 
   for (int i = 0; i < N; i++) {
     for (int j = 0; j < N - 1; j++) {
-      // sum1 = arr[j].
-      // sum2 = arr[j + 1].
+      sum1 = arr[j].totalScores();
+      sum2 = arr[j + 1].totalScores();
       if (sum1 < sum2) {
         swap(arr[j], arr[j + 1]);
       }
@@ -91,5 +91,25 @@ void descSort(Student arr[], int N) {
 
 Student *binarySearch(Student arr[], int N, int val) {
 
+  int first = 0, middle, last = N - 1;
+
+  while (first <= last) {
+    middle = (first + last) / 2;
+
+    if (val == arr[middle].getID()) {
+      return arr[middle];
+    }
+
+    else if (val < arr[mid.getID()]) {
+      last = middle - 1;
+    }
+
+    else {
+      first = middle + 1;
+    }
+
+  }
+
+  return 0;
   
 }
