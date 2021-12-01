@@ -62,6 +62,17 @@ public:
 
   }
 
+  int totalScore() {
+
+    int totalScore = 0;
+    for (int i = 0; i < scores.size(); i++) {
+      totalScore += scores[i];
+    }
+
+    return totalScore;
+    
+  }
+
 };
 
 #endif
