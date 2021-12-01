@@ -5,10 +5,23 @@
 
 using namespace std;
 
-void makeStudents(Student arr[], int N);
+/*
+
+*Had to include these functions inside the hpp file
+* this makes me believe that the reason why my 'quiz4'
+* assignment didn't compile is because I had my functions *in the wrong file. I'm not quite sure why they need to * *be in a certain file to compile, when the syntaxes being
+* used are correct, but that is how it works I believe
+
+** If my assumptions are correct, then all I would have to 
+** do for 'quiz4' is to separate the function definitions 
+** from the original file that I wrote them in
+
+*/
+
+/*void makeStudents(Student arr[], int N);
 void printStudents(Student arr[], int N);
 void descSort(Student arr[], int N);
-Student *binarySearch(Student arr[], int N, int val);
+Student *binarySearch(Student arr[], int N, int val);*/
 
 int main() {
 
@@ -36,87 +49,6 @@ int main() {
     cout << "Invalid ID number...";
   }
   
-  return 0;
-
-}
-
-void makeStudents(Student arr[], int N) {
-
-  ifstream ifs;
-  ifs.open("Students.txt");
-  if (ifs.fail()) {
-    cerr << "File could not be opened...";
-    exit(0);
-  }
-
-  for (int i = 0; i < N; i++) {
-    int id;
-    string name2;
-    vector<int> scores2;
-    ifs >> id >> name2;
-
-    for (int j = 0; j < 3; j++) {
-      int score;
-      ifs >> score;
-      scores2.push_back(score);
-    }
-
-    arr[i].setID(id);
-    arr[i].setName(name2);
-    arr[i].setScores(scores2);
-  }
-
-  ifs.close();
-
-}
-
-void printStudents(Student arr[], int N) {
-
-  for (int i = 0; i < N; i++) {
-    arr[i].printStudent();
-  }
-
-  cout << endl;
-
-}
-
-void descSort(Student arr[], int N) {
-
-  int sum1 = 0, sum2 = 0;
-
-  for (int i = 0; i < N; i++) {
-    for (int j = 0; j < N - 1; j++) {
-      sum1 = arr[j].totalScores();
-      sum2 = arr[j + 1].totalScores();
-      if (sum1 < sum2) {
-        swap(arr[j], arr[j + 1]);
-      }
-    }
-  }
-  
-}
-
-Student *binarySearch(Student arr[], int N, int val) {
-
-  int first = 0, middle, last = N - 1;
-
-  while (first <= last) {
-    middle = (first + last) / 2;
-
-    if (val == arr[middle].getID()) {
-      return arr[middle];
-    }
-
-    else if (val < arr[mid.getID()]) {
-      last = middle - 1;
-    }
-
-    else {
-      first = middle + 1;
-    }
-
-  }
-
   return 0;
 
 }
