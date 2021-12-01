@@ -7,9 +7,11 @@ using namespace std;
 
 /*
 
-*Had to include these functions inside the hpp file
+* Had to include these functions inside the hpp file
 * this makes me believe that the reason why my 'quiz4'
-* assignment didn't compile is because I had my functions *in the wrong file. I'm not quite sure why they need to * *be in a certain file to compile, when the syntaxes being
+* assignment didn't compile is because I had my functions 
+* in the wrong file. I'm not quite sure why they need to 
+* be in a certain file to compile, when the syntaxes being
 * used are correct, but that is how it works I believe
 
 ** If my assumptions are correct, then all I would have to 
