@@ -64,4 +64,15 @@ public:
     }
   }
 
+  void printNumbers(Numbers n) {
+
+    cout << "The numbers are:" << endl;
+    for (int i = 0; i < n.nums.size(); i++) {
+      cout << n.nums[i] << " ";
+    }
+
+    cout << endl;
+    
+  }
+
 };
