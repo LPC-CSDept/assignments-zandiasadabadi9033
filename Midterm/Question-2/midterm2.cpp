@@ -5,10 +5,10 @@
 
 using namespace std;
 
-void makeStudents(Student[], int);
-void printStudents(Student[], int);
-void descSort(Student[], int);
-Student *binarySearch(Student[], int, int);
+void makeStudents(Student arr[], int N);
+void printStudents(Student arr[], int N);
+void descSort(Student arr[], int N);
+Student *binarySearch(Student arr[], int N, int val);
 
 int main() {
 
@@ -33,22 +33,47 @@ int main() {
 
 }
 
-void makeStudents(Student[], int) {
+void makeStudents(Student arr[], int N) {
+
+  ifstream ifs;
+  ifs.open("Students.txt");
+  if (ifs.fail()) {
+    cerr << "File could not be opened...";
+    exit(0);
+  }
+
+  for (int i = 0; i < N; i++) {
+    int id;
+    string name2;
+    vector<int> scores2;
+    ifs >> id >> name2;
+
+    for (int j = 0; j < 3; j++) {
+      int score;
+      ifs >> score;
+      scores2.push_back(score);
+    }
+
+    arr[i].setID(id);
+    arr[i].setName(name2);
+    arr[i].setScores(scores2);
+  }
+
+  ifs.close();
+
+}
+
+void printStudents(Student arr[], int N) {
 
 
 }
 
-void printStudents(Student[], int) {
+void descSort(Student arr[], int N) {
 
 
 }
 
-void descSort(Student[], int) {
-
-
-}
-
-Student *binarySearch(Student[], int, int) {
+Student *binarySearch(Student arr[], int N, int val) {
 
   
 }
