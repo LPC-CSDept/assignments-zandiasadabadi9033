@@ -54,6 +54,7 @@ int main() {
       ifs >> id >> name >> graded >> scored;
       Student stu(id, name, graded, scored);
       courses[index].addStudent(stu);
+      cout << endl;
     }
 
     cout << "The updated list is: " << endl;
