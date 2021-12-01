@@ -23,7 +23,6 @@ public:
   Numbers(int i, int n) {
 
     ID = i;
-    srand(time(0));
     for (int j = 0; j < n; j++) {
       nums.push_back(rand() % 100);
     }
@@ -66,7 +65,6 @@ int Numbers::NumofObjects = 0;
 
 void printNumbers(Numbers n) {
   
-  cout << "The numbers are:" << endl;
   for (int i = 0; i < n.nums.size(); i++) {
     cout << n.nums[i] << " ";
   }
