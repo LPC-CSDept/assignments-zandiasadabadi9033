@@ -10,7 +10,7 @@ class Numbers {
 
 private:
   int ID;
-  vector<int>nums;
+  vector<int> nums;
   static int NumofObjects;
 public:
   Numbers() {
@@ -42,10 +42,12 @@ public:
     return NumofObjects;
 
   }
+
   friend void printNumbers(Numbers n);
+  
   int operator>(Numbers &n) {
 
-    int n1, n2;
+    int n1 = 0, n2 = 0;
 
     for (int i = 0; i < nums.size(); i++) {
       n1 += nums[i];
@@ -60,15 +62,18 @@ public:
 
 };
 
-  void printNumbers(Numbers n) {
+int Numbers::NumofObjects = 0;
 
-    cout << "The numbers are:" << endl;
-    for (int i = 0; i < n.nums.size(); i++) {
-      cout << n.nums[i] << " ";
-    }
-
-    cout << endl;
-    
+void printNumbers(Numbers n) {
+  
+  cout << "The numbers are:" << endl;
+  for (int i = 0; i < n.nums.size(); i++) {
+    cout << n.nums[i] << " ";
   }
+  
+  cout << endl;
+  
+}
+
 
 #endif
