@@ -15,13 +15,52 @@ public:
 
   }
 
-  int getID();
-  void setID(int);
-  string getName();
-  void setName(string);
-  vector<int> getScores();
-  void setScores(vector<int>);
-  void printStudent();
+  int getID() {
+
+    return ID;
+
+  }
+
+  void setID(int ID) {
+
+    this->ID = ID;
+
+  }
+
+  string getName() {
+
+    return name;
+
+  }
+
+  void setName(string name) {
+
+    this->name = name;
+
+  }
+
+  vector<int> getScores() {
+
+    return scores;
+
+  }
+
+  void setScores(vector<int> scores) {
+
+    this->scores = scores;
+
+  }
+
+  void printStudent() {
+
+    cout << ID << "\t" << name << "\t";
+    for (int i = 0; i < scores.size(); i++) {
+      cout << scores[i] << "\t";
+    }
+
+    cout << endl;
+
+  }
 
 };
 
