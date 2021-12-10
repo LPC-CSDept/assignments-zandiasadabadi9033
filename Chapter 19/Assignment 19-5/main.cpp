@@ -7,6 +7,7 @@ int partition(int[],int,int);
 void quickSort(int[],int,int);
 void printAll(int[],int);
 
+
 int main() {
   
   const int SIZE = 7;
@@ -16,6 +17,7 @@ int main() {
   std::cout << "The sorted 'fixed' numbers:" << std::endl;
   quickSort(numbers1, 0, SIZE - 1);
   printAll(numbers1, SIZE);
+
 
   std:: cout << "The random value numbers:" << std::endl;
   int numbers2[SIZE];
@@ -27,6 +29,7 @@ int main() {
   std::cout << "The sorted random numbers:" << std::endl;
   quickSort(numbers2, 0, SIZE - 1);
   printAll(numbers2, SIZE);
+
   
   return 0;
   
@@ -53,7 +56,7 @@ int partition (int arr[], int first, int last) {
 void quickSort(int arr[], int first, int last) {
   
   int pivotIndex;
-  if(first >= last) {
+  if (first >= last) {
     return;
   }
   pivotIndex = partition(arr, first, last);
