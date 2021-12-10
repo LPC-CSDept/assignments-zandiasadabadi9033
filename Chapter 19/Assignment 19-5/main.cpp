@@ -9,9 +9,8 @@ void printAll(int[],int);
 
 int main() {
   
-  std::cout << "The initial 'fixed' numbers:" << std::endl;
   const int SIZE = 7;
-
+  std::cout << "The initial 'fixed' numbers:" << std::endl;
   int numbers1[SIZE] = {1, 8, 5, 9, 4, 3, 7};
   printAll(numbers1, SIZE);
   std::cout << "The sorted 'fixed' numbers:" << std::endl;
@@ -36,8 +35,8 @@ int main() {
 int partition (int arr[], int first, int last) {
   
   int pivot = arr[last]; 
-  int i= -1;
-  for (int j = 0;j < last; j++) { 
+  int i = -1;
+  for (int j = 0; j < last; j++) { 
     if(arr[j] < pivot) {
       i++; 
       std::swap(arr[i], arr[j]);
@@ -65,7 +64,7 @@ void quickSort(int arr[], int first, int last) {
 
 void printAll(int arr[], int N) {
   
-  for(int i = 0;i < N; i++) {
+  for (int i = 0; i < N; i++) {
     std::cout << arr[i] << " ";
   }
   
