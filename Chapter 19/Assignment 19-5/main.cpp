@@ -7,6 +7,7 @@ int partition(int[],int,int);
 void quickSort(int[],int,int);
 void printAll(int[],int);
 
+int counter = 0;
 
 int main() {
   
@@ -19,7 +20,7 @@ int main() {
   printAll(numbers1, SIZE);
 
 
-  std:: cout << "The random value numbers:" << std::endl;
+  /*std:: cout << "The random value numbers:" << std::endl;
   int numbers2[SIZE];
   srand(time(0));
   for (int i = 0; i < SIZE; i++) {
@@ -28,7 +29,9 @@ int main() {
   printAll(numbers2, SIZE);
   std::cout << "The sorted random numbers:" << std::endl;
   quickSort(numbers2, 0, SIZE - 1);
-  printAll(numbers2, SIZE);
+  printAll(numbers2, SIZE);*/
+
+  std::cout << "The counter variable was called " <<  counter << " times." << std::endl;
 
   return 0;
   
@@ -61,6 +64,7 @@ void quickSort(int arr[], int first, int last) {
   pivotIndex = partition(arr, first, last);
   quickSort(arr, first , pivotIndex - 1); //sort left partition
   quickSort(arr, pivotIndex + 1, last); //sort right partition
+  counter++;
   
 }
 
