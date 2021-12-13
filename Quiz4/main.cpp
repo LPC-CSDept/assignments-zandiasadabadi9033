@@ -97,6 +97,8 @@ ifstream &operator>> (ifstream &ifs, Course &course) {
   
   course.setCourse(name, credit, sem,  studentsVect);
   
+  return ifs;
+
 }
 
 ostream &operator<< (ostream &os, Course &course) {
@@ -111,5 +113,7 @@ ostream &operator<< (ostream &os, Course &course) {
   }
   
   os << endl;
+
+  return os;
   
 }
