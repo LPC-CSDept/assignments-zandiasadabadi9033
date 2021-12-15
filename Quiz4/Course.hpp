@@ -9,6 +9,7 @@ using namespace std;
 class Course {
 
 private:
+	int cid;
   string cname;
   int credits;
   string semester;
@@ -28,6 +29,12 @@ public:
     this->semester = sem;
     this->student = stu;
     NUM_COURSES++;
+
+  }
+
+  int getID() const {
+
+    return cid;
 
   }
 

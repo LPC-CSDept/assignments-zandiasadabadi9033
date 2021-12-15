@@ -31,14 +31,15 @@ int main() {
     cerr << "File could not be read\n";
     exit(0);
   }
-
-  string courseID;
+  
+  int courseID;
 
   while (ifs >> courseID) {
     cout << "Course ID: " << courseID << endl;
     int index;
-    for (int i = 0; courses[i].getNumCourses(); i++) {
-      if (courses[i].getCName() == courseID) {
+	
+    for (int i = 0; i < courses[i].getNumCourses(); i++) {
+      if (courses[i].getID() == courseID) {
         index = i;
       }
     }
