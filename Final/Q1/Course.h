@@ -16,6 +16,7 @@ public:
   int getID();
   string getName();
   int getCredit();
+  void printCourse();
 
 };
 

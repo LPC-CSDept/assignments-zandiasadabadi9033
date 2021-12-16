@@ -36,3 +36,9 @@ int Course::getCredit() {
   return credit;
   
 }
+
+void Course::printCourse() {
+
+  cout << ID << " " << name << " " << credit << endl;
+  
+}

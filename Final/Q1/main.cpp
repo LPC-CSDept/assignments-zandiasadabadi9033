@@ -92,6 +92,7 @@ void bubbleSort(Course arr[], int N) {
 void print(Course arr[], int N) {
 
   for (int i = 0; i < N; i++) {
-    cout << arr[i];
+    arr[i].printCourse();
   }
+  
 }
