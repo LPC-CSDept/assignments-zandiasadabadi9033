@@ -1,0 +1,10 @@
+101 CS1 3
+120 CS2 4
+103 CS20 4
+110 Calc2 5
+108 Art 3
+111 English 3
+115 Histroy 3
+104 Business 3
+113 Physics 4
+122 Chemistry 4
