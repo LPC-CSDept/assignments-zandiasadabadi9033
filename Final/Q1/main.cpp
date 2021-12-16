@@ -7,6 +7,7 @@ using namespace std;
 int binary_search(Course [], int, int);
 int recursive_binary_search(Course [], int, int, int);
 void bubbleSort(Course [], int);
+void print(Course [], int);
 
 int main() {
 
@@ -23,6 +24,9 @@ int main() {
     ifs >> ID >> name >> credit;
     courses[i].setCourse(ID, name, credit);
   }
+
+  cout << "The sorted courses are: " << endl;
+  bubbleSort(courses, SIZE);
 
   ifs.close();
 
@@ -83,4 +87,11 @@ void bubbleSort(Course arr[], int N) {
     }
   }
 
+}
+
+void print(Course arr[], int N) {
+
+  for (int i = 0; i < N; i++) {
+    cout << arr[i];
+  }
 }
