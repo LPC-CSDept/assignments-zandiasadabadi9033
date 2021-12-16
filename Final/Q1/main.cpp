@@ -45,7 +45,7 @@ int binary_search(Course arr[], int N, int num) {
     if (arr[middle].getID() > num){
       last = middle - 1;
     }
-    
+
   }
 
   return -1;
@@ -54,5 +54,20 @@ int binary_search(Course arr[], int N, int num) {
 
 int recursive_binary_search(Course arr[], int left, int right, int num) {
 
+  if (right >= left) {
+    int middle = 1 + (right - left) / 2;
+
+    if (arr[middle].getID() == num) {
+      return middle;
+    }
+    if (arr[middle].getID() > num) {
+      return recursive_binary_search(arr, 1, middle - 1, num);
+    }
+
+    return recursive_binary_search(arr, middle + 1, right, num);
+  
+  }
+
+  return -1;
 
 }
