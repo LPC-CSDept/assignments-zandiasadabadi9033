@@ -32,14 +32,16 @@ int main() {
     exit(0);
   }
   
-  int courseID;
+//   int courseID;
+  string courseName;
 
-  while (ifs >> courseID) {
-    cout << "Course ID: " << courseID << endl;
+  while (ifs >> courseName) {
+    cout << "Course ID: " << courseName << endl;
     int index;
 	
     for (int i = 0; i < courses[i].getNumCourses(); i++) {
-      if (courses[i].getID() == courseID) {
+      if (courses[i].getCName() == courseName) {
+    //   if (courses[i].getCname() == courseID) {
         index = i;
       }
     }
