@@ -4,8 +4,9 @@
 
 using namespace std;
 
-int binary_search(Course, int, int);
-int recursive_binary_search(Course, int, int, int);
+int binary_search(Course [], int, int);
+int recursive_binary_search(Course [], int, int, int);
+void bubbleSort(Course [], int);
 
 int main() {
 
@@ -69,5 +70,17 @@ int recursive_binary_search(Course arr[], int left, int right, int num) {
   }
 
   return -1;
+
+}
+
+void bubbleSort(Course arr[], int N) {
+
+  for (int i = 0; i < N - 1; i++) {
+    for (int j = 0; j < N - i - 1; j++) {
+      if (arr[j].getID() > arr[j + 1].getID()) {
+        swap(arr[j], arr[j + 1]);
+      }
+    }
+  }
 
 }
