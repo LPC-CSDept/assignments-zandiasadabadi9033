@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "Course.hpp"
+#include "Course.h"
 
 using namespace std;
 
