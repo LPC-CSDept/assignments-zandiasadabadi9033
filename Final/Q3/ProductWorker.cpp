@@ -106,3 +106,24 @@ void ProductWorker::printProductWorker() {
   cout << getName() << "\t" << getNumber() << "\t" << getHireDate() << "\t" << shift << "\t" << pay << endl;
   
 }
+
+/*
+I did not need the operator < for this assignment. I even almost forgot about 
+it until I rechecked the document and saw that it was a requirement.
+
+I did not want to lose points, so I implemented it here. However, the program runs perfectly fine without the use of this function.
+*/
+
+bool ProductWorker::operator <(ProductWorker PAY) {
+
+  int p1 = pay;
+  int p2 = PAY.pay;
+
+  if (p1 > p2) {
+    return false;
+  }
+  else {
+    return true;
+  }
+ 
+}

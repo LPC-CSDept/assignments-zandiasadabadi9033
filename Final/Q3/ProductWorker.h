@@ -37,6 +37,9 @@ public:
   void setWorker(string, int, string, int, double);
   void printProductWorker();
   friend int mostPaid(ProductWorker [], int);
+  // did not need the < operator but included in
+  bool operator <(ProductWorker);
+  // more detail in the cpp file
   
 };
 
