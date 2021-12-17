@@ -88,7 +88,15 @@ void quick_sort(Course arr[], int low, int high) {
   
 }
 
-void recursive_quick_sort(Course[], int, int);
+void recursive_quick_sort(Course arr[], int low, int high) {
+
+  if (low < high) {
+    int pivot = partition(arr, low, high);
+    recursive_quick_sort(arr, low, pivot - 1);
+    recursive_quick_sort(arr, pivot + 1, high);
+  }
+  
+}
 
 void bubbleSort(Course arr[], int N) {
   
