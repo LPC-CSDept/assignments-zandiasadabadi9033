@@ -7,7 +7,6 @@ using namespace std;
 int partition(Course [], int, int);
 void quick_sort(Course [], int, int);
 void recursive_quick_sort(Course[], int, int);
-void bubbleSort(Course [], int);
 void print(Course [], int);
 
 int main() {
@@ -26,13 +25,16 @@ int main() {
     courses[i].setCourse(ID, name, credit);
   }
   
-  cout << "The sorted courses are: " << endl;
-  bubbleSort(courses, SIZE);
+  cout << "The unsorted courses are:" << endl;
+  print(courses, SIZE);
+
+  cout << "\n\nThe sorted courses using iterative quickSort are:\n";
+  quick_sort(courses, 0, SIZE - 1);
   print(courses, SIZE);
   
-  int ans1, ans2;
-  cout << "\nPlease enter an ID value to search: ";
-  cin >> ans1;
+  cout << "\n\nThe sorted courses using recursive quickSort are:\n";
+  recursive_quick_sort(courses, 0, SIZE - 1);
+  print(courses, SIZE);
   
   ifs.close();
   
@@ -95,19 +97,7 @@ void recursive_quick_sort(Course arr[], int low, int high) {
     recursive_quick_sort(arr, low, pivot - 1);
     recursive_quick_sort(arr, pivot + 1, high);
   }
-  
-}
 
-void bubbleSort(Course arr[], int N) {
-  
-  for (int i = 0; i < N - 1; i++) {
-    for (int j = 0; j < N - i - 1; j++) {
-      if (arr[j].getID() > arr[j + 1].getID()) {
-        swap(arr[j], arr[j + 1]);
-      }
-    }
-  }
-  
 }
 
 void print(Course arr[], int N) {
