@@ -27,6 +27,34 @@ int main() {
 
   cout << "The sorted courses are: " << endl;
   bubbleSort(courses, SIZE);
+  print(courses, SIZE);
+
+  int ans1, ans2;
+  cout << "\nPlease enter an ID value to search: ";
+  cin >> ans1;
+
+  cout << "\n\nUsing iterative binarySearch: " << endl;
+  int bin = binary_search(courses, SIZE, ans1);
+  if (bin != -1) {
+    cout << "Found at index #" << bin << endl;
+    courses[bin].printCourse();
+  } 
+  else {
+    cout << "Invalid input..." << endl;
+  }
+  
+  cout << "\nPlease enter another ID value to search: ";
+  cin >> ans2;
+  
+  cout << "\n\nUsing recursive binarySearch: " << endl;
+  bin = recursive_binary_search(courses, 0, SIZE, ans2);
+  if (bin != -1) {
+    cout << "Found at index #" << bin << endl;
+    courses[bin].printCourse();
+  } 
+  else {
+    cout << "Invalid input..." << endl;
+  }
 
   ifs.close();
 
@@ -94,5 +122,5 @@ void print(Course arr[], int N) {
   for (int i = 0; i < N; i++) {
     arr[i].printCourse();
   }
-  
+
 }
