@@ -12,6 +12,7 @@ int main() {
   fstream ifs;
   ifs.open("textFile.txt");
 
+  cout << "The employees are:\n";
   for (int i = 0; i < SIZE; i++) {
     string name;
     int number;

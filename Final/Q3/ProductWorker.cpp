@@ -53,6 +53,13 @@ int Employee::getNumber() {
   
 }
 
+ProductWorker::ProductWorker() : Employee() {
+
+  shift = 0;
+  pay = 0;
+  
+}
+
 ProductWorker::ProductWorker(string cname, int num, string date, int SHIFT, double PAY): Employee(cname, num, date) {
   
   shift = SHIFT;
