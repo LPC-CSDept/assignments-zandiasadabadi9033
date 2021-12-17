@@ -21,3 +21,22 @@ public:
   string getHireDate();
 
 };
+
+class ProductWorker : public Employee {
+
+private:
+  int shift;
+  double pay;
+public:
+  ProductWorker();
+  ProductWorker(string, int, string, int, double);
+  void setShift(int);
+  int getShift();
+  void setPay(double);
+  double getPay();
+  void setWorker(string, int, string, int, double);
+  void printProductWorker();
+
+};
+
+#endif
