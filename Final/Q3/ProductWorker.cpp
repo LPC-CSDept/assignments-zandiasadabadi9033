@@ -103,6 +103,6 @@ void ProductWorker::setWorker(string cname, int num, string date, int SHIFT, dou
 
 void ProductWorker::printProductWorker() {
   
-  cout << getName() << " " << getHireDate() << " " << getNumber() << " " << shift << " " << pay << endl;
+  cout << getName() << "\t" << getNumber() << "\t" << getHireDate() << "\t" << shift << "\t" << pay << endl;
   
 }

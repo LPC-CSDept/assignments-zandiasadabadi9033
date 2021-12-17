@@ -36,7 +36,8 @@ public:
   double getPay();
   void setWorker(string, int, string, int, double);
   void printProductWorker();
-
+  friend int mostPaid(ProductWorker [], int);
+  
 };
 
 #endif
