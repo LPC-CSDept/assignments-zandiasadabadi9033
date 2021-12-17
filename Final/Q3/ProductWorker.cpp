@@ -17,27 +17,15 @@ Employee::Employee(string cname, int date, string num) {
   
 }
 
-string Employee::getName() {
-  
-  return name;
-  
-}
-
-string Employee::getHireDate() {
-  
-  return hireDate;
-  
-}
-
-int Employee::getNumber() {
-  
-  return number;
-  
-}
-
 void Employee::setName(string cname) {
   
   name = cname;
+  
+}
+
+string Employee::getName() {
+  
+  return name;
   
 }
 
@@ -47,9 +35,21 @@ void Employee::setHireDate(string date) {
   
 }
 
+string Employee::getHireDate() {
+  
+  return hireDate;
+  
+}
+
 void Employee::setNumber(int num) {
   
   number = num;
+  
+}
+
+int Employee::getNumber() {
+  
+  return number;
   
 }
 
@@ -60,27 +60,27 @@ ProductWorker::ProductWorker(string cname, int num, string date, int SHIFT, doub
   
 }
 
-int ProductWorker::getShift() {
-  
-  return shift;
-  
-}
-
-double ProductWorker::getPay() {
-  
-  return pay;
-  
-}
-
 void ProductWorker::setShift(int SHIFT) {
   
   shift = SHIFT;
   
 }
 
+int ProductWorker::getShift() {
+  
+  return shift;
+  
+}
+
 void ProductWorker::setPay(double PAY) {
   
   pay = PAY;
+  
+}
+
+double ProductWorker::getPay() {
+  
+  return pay;
   
 }
 
