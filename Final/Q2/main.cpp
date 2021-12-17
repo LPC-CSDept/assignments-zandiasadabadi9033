@@ -4,6 +4,9 @@
 
 using namespace std;
 
+int partition(Course [], int, int);
+void quick_sort(Course [], int, int);
+void recursive_quick_sort(Course[], int, int);
 void bubbleSort(Course [], int);
 void print(Course [], int);
 
@@ -36,6 +39,25 @@ int main() {
   return 0;
   
 }
+
+int partition(Course arr[], int low, int high) {
+
+  int pivot = arr[high].getID();
+  int i = (low - 1);
+
+  for (int j = low; j <= high - 1; j++) {
+    if (arr[j].getID() <= pivot) {
+      i++;
+      swap(arr[i], arr[j]);
+    }
+  }
+  swap(arr[i + 1], arr[high]);
+
+  return (i + 1);
+
+}
+void quick_sort(Course [], int, int);
+void recursive_quick_sort(Course[], int, int);
 
 void bubbleSort(Course arr[], int N) {
   
