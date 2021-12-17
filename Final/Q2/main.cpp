@@ -56,7 +56,38 @@ int partition(Course arr[], int low, int high) {
   return (i + 1);
 
 }
-void quick_sort(Course [], int, int);
+void quick_sort(Course arr[], int low, int high) {
+
+  // creating a stack
+  int stack[high - low + 1];
+  int top = -1;
+
+  // initializing the stack values
+  stack[++top] = low;
+  stack[++top] = high;
+
+  // removing the unnecessary data
+  while (top >= 0) {
+    high = stack[top--];
+    low = stack[top--];
+
+    int pivot = partition(arr, low, high);
+
+    // if on the left side of pivot, push the left side to stack
+    if (pivot - 1 > low) {
+      stack[++top] = low;
+      stack[++top] = pivot - 1;
+    }
+
+    // if on the right side of pivot, push the right side to stack
+    if (pivot + 1 < high) {
+      stack[++top] = pivot + 1;
+      stack[++top] = high;
+    } 
+  }
+  
+}
+
 void recursive_quick_sort(Course[], int, int);
 
 void bubbleSort(Course arr[], int N) {
