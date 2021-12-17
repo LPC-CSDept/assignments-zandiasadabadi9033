@@ -1,3 +1,12 @@
+/*
+Troubleshooting for all parts of the exam are 
+included in the Canvas submission page for the
+Final Exam.
+*/
+
+
+
+
 #include <iostream>
 #include <fstream>
 #include "Course.h"
